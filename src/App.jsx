@@ -30,7 +30,7 @@ export default function App() {
         }
         return null;
     }
-    function handle_click(idx) {
+    function handle_sqr_click(idx) {
         if (squares[idx] || calculate_winners(squares)) return;
 
         const nextSquares = squares.slice();
@@ -50,7 +50,7 @@ export default function App() {
                     return (
                         <Square
                             key={"sqr-" + i}
-                            onSquareClick={() => handle_click(i)}
+                            onSquareClick={() => handle_sqr_click(i)}
                             value={v}
                             won={winners ? winners.includes(i) : false}
                         />
